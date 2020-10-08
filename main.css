@@ -1,0 +1,359 @@
+/*ローディングに関する部分*/
+#loader-bg {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 1;
+}
+#loader {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+#loadanimation {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #333;
+  border-radius: 100%;  
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+@keyframes sk-scaleout {
+  0% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/*全体に関する部分*/
+body{
+    font-family: sans-serif;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.section{
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+#positions{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+}
+
+/*メニュー部分*/  
+.active_menu{
+    filter: opacity(0);
+}
+/*スマホメニュー*/
+.smartmenu{
+    z-index: 999;
+    filter: opacity(1);
+    position: fixed;
+    top 0px;
+    left: 10px;
+}
+.smartmenu a{
+    text-decoration: none;
+}
+.menubusy {
+    visibility: hidden;
+}
+.dropmenu{
+    visibility: visible;
+}
+#dropmenu ul{
+    padding: 0;
+    margin: 0;
+}
+#dropmenu ul li{
+    padding:5px;
+    padding-right: 20px;
+    margin: 5;
+    list-style: none;
+    color: #000044;
+    background-color: #ffffff;
+}
+#dropmenu ul li a{
+    color: #000044;
+}
+#smartmenu{
+    display: none;
+    height: 0;
+}
+/*PCメニュー*/
+#menu {
+    position:fixed;
+    top:0;
+    left:0;
+    height: 40px;
+    z-index: 70;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ffffff;
+}
+#menu li {
+    display:inline-block;
+    margin: 10px;
+    color: #ffffff;
+    filter: opacity(50%);
+}
+#menu li.active{
+    color: #ffffff;
+    filter: opacity(100%);
+}
+#menu li a{
+    text-decoration:none;
+    color: #ffffff;
+}
+#menu li.active a:hover{
+    color: #ffff99;
+    transition: 0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+}
+#menu li a:hover{
+    color: #ffff99;
+    filter: opacity(100%);
+    transition: 0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+}
+#menu li a,
+#menu li.active a{
+    padding: 9px 18px;
+    display:block;
+}
+#menu li.active a{
+    color: #ffffff;
+}
+
+/*ホーム部分*/
+#home{
+    padding: 0;
+    text-align: center;
+    background:linear-gradient(#ffffff,#ffffff,#CFCCC9);
+}
+#box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height:400px;
+}
+.trim{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.trim img.top-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto auto;
+    width: 100%;
+    height: 100%;
+    filter: opacity(0);
+}
+
+#home img.logo{ 
+    margin-top:35vh;
+    width:250px;
+}
+#home img.img_menu{
+    width: 130px;
+}
+#home ul li{
+    display: inline-block;
+    width: 200px;
+}
+#home p{
+    font-size: 18px;
+    color: #000033;
+    margin: 0;
+}
+
+/*企業理念部分*/
+#company{
+    width: 100%;
+    background:linear-gradient(#000008, #000428, #243b55);
+    text-align: center;
+}
+#company h2{
+    margin-top: 10%;
+}
+#company .position{
+    font-size: 20px;
+    margin-top: 10%;
+}
+
+/* 会社概要 */
+#profile{
+    background:linear-gradient(#000008, #000428, #243b55);
+}
+#position{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    position: relative;
+}
+#profile h2{
+    float: left;
+    margin-top: 40%;
+    margin-left: 100px;
+}
+table.profile{
+    margin-right: 20px;
+    position: relative;
+    margin-top: 10vh;
+    color: #ffffff;
+    float: right;
+    border-collapse: collapse;
+}
+table td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+}
+table tr td.summary{
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* 採用部分 */
+#recruit{
+    background:linear-gradient(#000008, #000428, #243b55);
+}
+#recruit h2{
+    margin-top: 20%;
+}
+#recruit ul{
+    padding: 0;
+}
+#recruit ul li {
+    list-style: none;
+    display: inline-block;
+}
+#recruit ul a.recruit{
+    margin: 50px;
+    text-decoration: none;
+    color: #ffffff;
+}
+a li.circle{
+    border: 2px double #ffffff;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+}
+a li.circle:hover{
+    background-color: #ffffff;
+    color: #002949;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    transition: 0.6s;
+}
+/*コンタクト部分*/
+#contact{
+    text-align: center;
+    background:linear-gradient(#000008, #000428, #243b55);
+    height: 100vh;
+}
+#form .main_contents{
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+}
+#label{
+    margin-top: 5px;
+    font-size: 15px;
+    text-align: left;
+}
+input[type="text"]{
+    height: 30px;
+    padding:3px;
+    border-radius: 5px 5px 5px 5px;
+}
+textarea{
+    border-radius: 5px 5px 5px 5px;
+}
+select{
+    padding-bottom: 4px;
+}
+input[type="submit"]{
+    width: 70px;
+    height: 30px;
+}
+
+/* アクセス部分 */
+#access{
+    background:linear-gradient(#000008, #000428, #243b55);
+}
+#map{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
+    width: 90%;
+    overflow: hidden;
+}
+#map iframe{
+    width: 100% !important;
+}
+#access p{
+    margin: 5px;
+}

@@ -1,0 +1,62 @@
+.section{
+    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+#position{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+}
+body{
+    color: #000044;
+    margin: 0;
+}
+/*採用情報（キャリア・新卒ページ）部分*/
+#career{
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(#ffffff, #c9d6ff);
+}
+#newman{
+    margin: 0;
+    background: linear-gradient(#ffffff, #c9d6ff);
+}
+table.recruit{
+    color: #000044;
+    border-collapse: collapse;
+}
+table.recruit td{
+    border: 1px solid #000044;
+    padding: 10px;
+    width: 1000;
+}
+table.recruit td.summary{
+    text-align: center;
+    font-weight: bold;
+    width: 130;
+}
+table.recruit td ul{
+    padding-left: 25px;
+    margin: 0;
+}
+#career h4{
+    padding: 3px;
+    background-color: cornflowerblue;
+}
+#career h2 a{
+    color: #000044;
+}
+#newman h4{
+    padding:3px;
+    background-color: cornflowerblue;
+}
+#newman h2 a{
+    color: #000044;
+}
+footer{
+    margin-top: 30px;
+    font-size: 12px;
+}
